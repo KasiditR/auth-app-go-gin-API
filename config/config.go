@@ -1,8 +1,8 @@
 package config
 
 import (
-	"github.com/joho/godotenv"
-	"log"
+	// "github.com/joho/godotenv"
+	// "log"
 	"os"
 )
 
@@ -13,10 +13,10 @@ type Config struct {
 }
 
 func LoadConfig() *Config {
-	err := godotenv.Load(".env")
-	if err != nil {
-		log.Fatalf("err loading: %v", err)
-	}
+	// err := godotenv.Load(".env")
+	// if err != nil {
+	// 	log.Fatalf("err loading: %v", err)
+	// }
 	return &Config{
 		Port:           getEnv("PORT", "3000"),
 		GithubClientId: getEnv("GITHUB_CLIENT_ID", ""),
